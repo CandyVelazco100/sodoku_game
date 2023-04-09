@@ -36,10 +36,13 @@ function App() {
             <tbody>
               {
                 [0,1,2,3,4,5,6,7,8].map((row, rIndex) => {
-                  return <tr key={rIndex}>
+                  return <tr key={rIndex} className={(row + 1) % 3 === 0 ? 'bBorder' : ' '}>
                     {[0,1,2,3,4,5,6,7,8].map((col, cIndex) => {
-                      return <td key={rIndex + cIndex}>
-                      <input onChange={(e) => onInputChange(e, row, col)} value={SudokuArr[row][col] === -1 ? ' ' : SudokuArr[row][col]}className="cellInput"/>
+                      return <td key={rIndex + cIndex} className={(col + 1) % 3 === 0 ? 'rBorder' : ' '}>
+                      <input onChange={(e) => onInputChange(e, row, col)} 
+                      value={SudokuArr[row][col] === -1 ? ' ' : SudokuArr[row][col]}
+                      className="cellInput"
+                      disabled={initial[row][col] !== -1}/>
                     </td> 
                     })}
                       
@@ -49,6 +52,12 @@ function App() {
              
             </tbody>
         </table>
+        <div className="buttonContainer"> 
+          <button className="checkButton">Check</button>
+          <button className="solverButton">Solve</button>
+          <button className="resetButton">Reset</button>
+
+        </div>
       </div>
     </div>
   );

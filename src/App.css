@@ -36,3 +36,44 @@ table{
 td{
   padding: 0;
 }
+
+.buttonContainer{
+  margin-top: 20px;
+
+}
+
+.solverButton{
+  background-color: orange;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px ;
+  border: none;
+  border-radius: 20px;
+  margin: 0px 20px;
+}
+
+.checkButton{
+  background-color: tomato;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px ;
+  border: none;
+  border-radius: 20px;
+}
+
+.resetButton{
+  background-color: aquamarine;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px ;
+  border: none;
+  border-radius: 20px;
+}
+
+.bBorder{
+  border-bottom: 2px solid black;
+}
+
+.rBorder{
+  border-right: 2px solid black;
+}
